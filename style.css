@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&family=Roboto:wght@100&family=Sometype+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mohave', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   background-color: #02113b
+}
+
+/* utility classes  */
+.btn{
+    padding: 2px 5px;
+    
+    background-color:cyan;
+    border: 2px solid cyan;
+    border-radius: 10px ;
+    height: 50px;
+    width: 135px;
+    cursor: pointer;
+    box-shadow: 0 0 2px cyan,
+    0 0 15px cyan;
+    font-size: 20px;
+}
+.btn a{
+    list-style: none;
+}
+.btn  a {
+    text-decoration: none;
+    color: black;
+}
+.btn:hover{
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px rgb(125, 125, 243);
+}
+.main{
+   height: 100%;
+   width: 100%;
+   position: relative;
+}
+.nav{
+    height: 100px;
+    width: 100%;
+    padding:0 1vw;
+    /* background-co    lor: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav h3{
+    font-size: 35px;
+    color: aliceblue;
+    font-weight: 700;
+    letter-spacing: 3;
+}
+.nav h3 span{
+    color: aqua;
+}
+.navbar{
+    display: flex;
+}
+.navbar ul{
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+    gap: 4vw;
+    
+    padding: 0 3vw;
+}
+.navbar ul li{
+    list-style: none;
+    color: white;
+    font-family:'Mohave', sans-serif ;
+    font-size: 25px;
+    font-weight: 500;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 0 2px;
+    
+}
+.navbar ul li a:hover{
+    color: cyan;
+
+}
+.navbar  i{
+    font-size: 3vw;
+    font-weight: 700;
+    align-items: center;
+    padding: 0 3vw;
+    display: none;
+
+}
+
+
+/* home section  */
+
+.content{
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.left{
+    height: 100%;
+    width: 50%;
+    padding: 7vw 10vw;
+}
+.left h1{
+    color: aliceblue;
+    font-size: 4vw;
+    line-height: 4.4vw;
+}
+.left h1 span{
+    color: aqua;
+}
+.left p {
+    font-weight: 800;
+    width: 80%;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+.right{
+    height: 100%;
+    width: 50%;
+   
+}
+.right img{
+    height: 100%;
+    width: 100%;
+    margin-top: 6vw;
+    
+}
+
+.main-text{
+    padding-top: 3vw;
+}
+.main-text h2{
+    font-size: 60px;
+    color: aliceblue;
+    line-height: 1;
+    text-align: center;
+}
+.main-text h2 span{
+    color: #0ef;
+}
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+}
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.row img{
+    margin: 5px 10px;
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 90%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.1),#0ef);
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layer h5{
+    color:#f3eaea;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;   
+}
+.layer p{
+    color: #f4f0f0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.layer i{
+    color:#fff ;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #ff004f;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% ;
+}
+.row:hover img{
+    transform: scale(1.1);
+}
+.row:hover .layer{
+    height: 100%;
+}
+
+.last-text{
+    display: flex;
+    background-color: #0ef;
+    justify-content: center;
+    margin-top: 15px;
+    height: 5vw;
+    align-items: center;
+}
+
+
+
+
+
+
+/* media queries */
+@media (max-width:635px) {
+    .nav{
+        padding: 0 1vw;
+        height: 60px;
+    }
+    
+    .navbar ul{
+        /* background-color: aqua; */
+        display: none;
+        padding: 0 5vw;
+    }
+    .navbar   i{
+        display: block;
+        color: white;
+        font-size: 35px;
+        padding: 0 2vw;
+    }
+    .content{
+        height: calc(100% - 60px);
+        flex-direction: column;
+        
+    }
+    .left{
+        padding: 10vw 8vw;
+        width: 100%;
+        height: 60%;
+    }
+    .left h1{
+        font-size: 10vw;
+        line-height: 11vw;
+    }
+    .left p{
+        font-size: 4vw;
+        width: 90%;
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+    }
+    .right{
+        width: 100%;
+        height: 40%;
+    }
+    
+    #project{
+        margin-top: 10vw;
+    }
+    .main-text{
+        text-align: center;
+        padding-bottom:4vw ;
+    }
+    .portfolio-content{
+        margin-right: 2vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .last-text{
+        height: 10vw;
+    }
+}
